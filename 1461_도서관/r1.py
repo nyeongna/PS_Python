@@ -35,6 +35,4 @@ while len(neg) > 0:
     idx = idx + 1
     if idx==m: idx = 0
     
-
-print(largest)
 print(dist*2 - largest)

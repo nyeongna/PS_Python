@@ -20,16 +20,17 @@ if len(pos) > 0:
 if len(neg) > 0:
     largest = max(largest, neg[0])
 
-# 가는 거리를 계산한다
+# 가는 거리를 계산한다 (양수,pos)
 dist = 0
 for idx,num in enumerate(pos):
     if idx%m == 0:
         dist = dist + num
-
+# 가는 거리를 계산한다 (음수, pos)
 for idx,num in enumerate(neg):
     if idx%m==0:
         dist = dist + num
-
+        
+# 젤 긴 거리는 편도이므로 한 번 빼준다
 print(dist*2-largest)
     
 
