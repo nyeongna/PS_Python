@@ -1,7 +1,9 @@
 from sys import stdin
 
+# 입력받기
 graph = [ list(map(int, stdin.readline().strip().split())) for _ in range(9) ]
 
+#
 zero_list = []
 row_dict = [ dict() for _ in range(9) ]
 col_dict = [ dict() for _ in range(9) ]
@@ -27,7 +29,6 @@ def PrintGraph():
         for j in range(9):
             print(graph[i][j], end=' ')
         print()
-    exit()
 # (x,y) 위치에 num을 넣을 수 있는지 체크
 def checkNum(x,y,num):
     if num in row_dict[x]:
@@ -51,8 +52,10 @@ def deleteNum(x,y,num):
 def DFS(level):
     if level==zero_num:
         PrintGraph()
-        
+        exit()
+    # 채워야할 자리의 level(idx) 정보를 뽑아내고
     x, y = zero_list[level]
+    # 1~10 중 되는 숫자를 시도해본다.
     for try_num in range(1,10,1):
         if checkNum(x, y, try_num) == 1:
             markNum(x, y, try_num)
@@ -61,3 +64,8 @@ def DFS(level):
             deleteNum(x, y, try_num)
 
 DFS(0)
+
+'''
+시간 복잡도
+10^빈 자리의 갯수이지만...."baekjoon의 백트래킹 알고리즘으로 풀 수 있는 입력만 주어진다. 다음은 그 알고리즘의 수행 시간이다" 조건이 있으므로 풀리는듯?
+'''
