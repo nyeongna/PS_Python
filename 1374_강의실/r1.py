@@ -25,6 +25,7 @@ for lecture in class_list[1:]:
         heapq.heappop(heap)
         heapq.heappush(heap, lecture[1])
 print(class_num)
+
 '''
 시간복잡도
 class_list 정렬: NlogN

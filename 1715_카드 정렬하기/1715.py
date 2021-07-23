@@ -17,7 +17,6 @@ while len(card_list) != 1:
     heapq.heappush(card_list, f+s)
 
 print(ans)
-
 '''
 시간 복잡도
 Priority_queue 생성: O(N)
