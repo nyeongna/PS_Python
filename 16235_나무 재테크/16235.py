@@ -25,13 +25,6 @@ def SpringSummer():
             nutrient_graph[i][j] += dead_tree
             tree_graph[i][j] = alive_tree_list
 
-
-def Summer(dead_tree_list):
-    for r_idx, i in enumerate(dead_tree_list):
-        for c_idx, j in enumerate(i):
-            for tree in j:
-                nutrient_graph[r_idx][c_idx] += tree//2
-
 x_dir = [-1,0,1,0, -1, 1, 1, -1]
 y_dir = [0,1,0,-1, 1, 1, -1, -1]
 
