@@ -1,13 +1,15 @@
 from collections import deque
 t = int(input())
 
-# 에라스토의 체?
+# 에라토스테네스의 체
+# O(Nlog(logN))
 prime_list = [0]*10000
 for i in range(2, 10000, 1):
     if prime_list[i] == 0:
         for j in range(i+i, 10000, i):
             prime_list[j] = 1
 
+# t만큼 반복
 for _ in range(t):
     A, B = map(int, input().split())
     Q = deque()
@@ -16,6 +18,7 @@ for _ in range(t):
     visited[A] = 1
     
     flag=0
+    # BFS를 통해 최소 거리를 구한다
     while len(Q) > 0:
         num, dist = Q.popleft()
         if num==B:

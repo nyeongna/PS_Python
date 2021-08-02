@@ -16,11 +16,11 @@ for _ in range(k):
 
     # check which wheel should be rotating
     # 바로 돌리지 말고 각 바퀴가 돌아가는지 안돌아가는지 체크한다
-    # 오른쪽 방향
+    # 왼쪽 방향
     for idx in range(wheel, 0, -1):
         if wheel_list[idx][6] != wheel_list[idx-1][2]:
             rotate[idx-1] = -rotate[idx]
-    # 왼쪽 방향
+    # 오른쪽 방향
     for idx in range(wheel, 3, 1):
         if wheel_list[idx][2] != wheel_list[idx+1][6]:
             rotate[idx+1] = -rotate[idx]
