@@ -10,9 +10,8 @@ def dfs(x, y, num):
         if x==r and y==c:
             print(cnt)
             exit()
-        #cnt += 1
+        cnt += 1
         return
-
     divided = num // 2
     # 핵심 조건.
     # 조건의 r,c가 안들어 있는 4사분면은 그냥 (num * num) 크기만큼 더해버리면된다. 재귀할필요없음.
