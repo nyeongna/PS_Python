@@ -1,3 +1,9 @@
+
+'''
+시간복잡도
+O( c * (r * c) * r) = O (100 * 100 * 100 * 100) = 1억번 애매애매?
+'''
+
 from sys import stdin
 
 r, c, m = map(int, input().split())
