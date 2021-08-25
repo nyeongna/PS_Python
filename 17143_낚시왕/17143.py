@@ -34,9 +34,11 @@ def move(x, y, speed, dir, size):
     # 왼쪽 오른쪽 방향이라면 (c*2-2)
     if dir == 1 or dir == 3:
         count = speed % (c*2-2)
+
     # 위 아래 방향이라면 % (r*2-2)
     elif dir== 0 or dir == 2:
         count = speed % (r*2-2)
+        
     x_dir, y_dir, dir = direction[dir]
     # 상어 현재 방향으로 count 만큼만 움직이면 된다.
     # s의 최대인 1000까지 안돌고 r*2-2 OR c*2-2 번만 돌면 된다. 시간단축 핵심!
