@@ -15,7 +15,11 @@ e e f f e
 '''
 s = input()
 for idx in range(len(s)):
-    # palindrome 확인부분
+    # palindrome 확인부분 reverse활용
+    # if s[idx:] == ''.join(reversed(s[idx:])):
+    #     print(len(s)+idx)
+    #     break
+    #palindrome 확인부분 [::-1] 활용
     if s[idx:] == s[idx:][::-1]:
         print(len(s)+idx)
         exit()
