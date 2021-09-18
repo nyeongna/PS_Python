@@ -18,6 +18,7 @@ def DFS(idx, total):
         return
     for i in range(idx, n, 1):
         DFS(i, total+coin_list[i])
+
     
 for _ in range(t):
     n = int(input())
