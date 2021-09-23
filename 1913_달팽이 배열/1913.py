@@ -14,6 +14,7 @@ while num != 0:
     graph[row][col] = num
     num -= 1
     r, c = row+dir[d][0], col+dir[d][1]
+    
     # 0, n 범위를 넘거나 벽(graph[r][c]!=0) 을 만났다면 방향을 바꾼다.
     if r < 0 or r >=n or c < 0 or c >= n or graph[r][c] != 0:
         d = (d+1) % 4
