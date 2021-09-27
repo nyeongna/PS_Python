@@ -13,6 +13,6 @@ for i in range(1, n+1):
     for j in range(101):
         dp[i][j] = dp[i-1][j]
         if j-neg_list[i] > 0:
-            dp[i][j] = max(dp[i-1][j], dp[i-1][j-neg_list[i]]+pos_list[i])
+            dp[i][j] = max( dp[i-1][j], dp[i-1][j-neg_list[i]] + pos_list[i])
 
 print(dp[n][100])
