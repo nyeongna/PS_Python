@@ -12,6 +12,7 @@ for idx, height in enumerate(graph):
     else:
         sum += height
 
+
 cur_height, cur_idx, sum, right_to_left = 0,0,0,0
 for idx, height in enumerate(graph[::-1]):
     # 동일 높이에서 [왼->오] 와 [오->왼] 의 고인빗물 겹치는걸 피하기 위해 커져가는 높이에서만 빗물을 구한다 오->왼
@@ -26,3 +27,10 @@ for idx, height in enumerate(graph[::-1]):
         sum += height
 
 print(left_to_right + right_to_left)
+
+ 
+# 1 0 1 0 1
+
+
+
+

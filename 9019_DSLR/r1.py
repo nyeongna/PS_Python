@@ -5,7 +5,7 @@ for _ in range(int(input())):
     Q = deque()
     Q.append((A, 0, ""))
     visited = { A:1 }
-    print(type(visited))
+
     while len(Q) > 0:
         num, dist, order = Q.popleft()
         if num == B:
