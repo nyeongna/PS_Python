@@ -15,6 +15,9 @@ for _ in range(t):
     for coin in coin_list:
         for idx in range(coin, target+1, 1):
             dp[idx] = dp[idx] + dp[idx-coin]
+    for i in range(target+1):
+        print(dp[i], end=' ')
+    print()
     print(dp[target])
 
     

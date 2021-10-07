@@ -6,8 +6,8 @@ for _ in range(n):
     graph.append(list(map(int, input().split())))
 
 
-'''
-19 * 500 * 500 = 300만
+''' 시간복잡도
+19 * 500 * 500 * 3 = 1,200만
 '''
 shape_list = [
     [(0,1), (0,2), (0,3)],
@@ -35,6 +35,7 @@ ans = 0
 
 def func(x, y):
     global ans
+
     for row in shape_list:
         sum = graph[x][y]
         for i in row:

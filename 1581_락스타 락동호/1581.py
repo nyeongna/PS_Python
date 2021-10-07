@@ -21,6 +21,7 @@ def DFS(level, cur, FF, FS, SF, SS):
     else:
         ch[a] = 1
     ans = max(ans, level)
+
     # FF, FS 1개 이상 있을 때
     if level==0 and cur==-1:
         if FF >= 1:
@@ -28,6 +29,7 @@ def DFS(level, cur, FF, FS, SF, SS):
         if FS >= 1:
             DFS(1, 'FS', FF, FS-1, SF, SS)
         return
+
     if level==0 and cur==-2:
         if SF >= 1:
             DFS(1, 'SF', FF, FS, SF-1, SS)
