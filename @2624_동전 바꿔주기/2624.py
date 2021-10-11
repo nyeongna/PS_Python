@@ -26,12 +26,11 @@ for i in range(k):
 #         j=4원 일때 경우의 수 2가지에 4*2원을 각각 더하면 12원이 되므로 2가지 경우의수
 #         j=0원 일때 경우의 수 1가지는 4원이 2개밖에 없으므로 만족하지 못하므로 pass
 #         따라서 dp[12] = dp[12] + dp[12 - 4*1] + dp[12 - 4*2] = 4가지가 됨
-
     for j in range(target, -1, -1):
         # 현재 coin을 1~k번까지 빼가면서 경우의 수를 채워넣는다
         for k in range(1, coin_num+1):
             if j-coin*k >= 0:
                 dp[j] = dp[j] + dp[j-coin*k]
+
 print(dp[target])
-# print(dp)
     

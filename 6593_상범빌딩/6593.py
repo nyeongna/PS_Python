@@ -24,8 +24,7 @@ while True:
                     goal = [k, i, idx]
                 graph[k][i][idx] = char
         input()
-    # for k in range(l):
-    #     print(graph[k])
+
     Q = deque()
     start.append(0)
     Q.append(start)

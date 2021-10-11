@@ -4,7 +4,7 @@ graph = [input() for _ in range(n)]
 visited = [ [ 0 for _ in range(n) ] for _ in range(n) ]
 
 ans_list = list()
-###########################################
+########################################### 
 # DFS 들어왔을때 범위 검사를 함 
 def DFS(x, y):
     if 0 > x or x >= n or 0 > y or y >= n or visited[x][y]==1 or graph[x][y]=='0':
