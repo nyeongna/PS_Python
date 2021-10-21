@@ -29,6 +29,7 @@ def BFS(x, y, val, visited):
         # '0000' 형식의 이진법으로 나타내서 0 이면 갈 수 있는 방향 1이면 벽 방향
         # 왼쪽부터 <<< 서, 북, 동, 남 >>>  순서
         bin_val = bin(graph[x][y])[2:].zfill(4)
+        
         for i in range(4):
             # bin_val[i]가 0이어야지 뚫린 방향이다
             if bin_val[i]=='0':

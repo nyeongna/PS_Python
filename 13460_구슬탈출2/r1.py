@@ -18,17 +18,14 @@ x_dir = (-1, 0, 1, 0)
 y_dir = (0, 1, 0, -1)
 
 def move(x, y, dir):
-
     move_cnt = 0    
     while 0 <= x + x_dir[dir] < n and 0 <= y + y_dir[dir] < m and graph[x+x_dir[dir]][y+y_dir[dir]] != '#':
-        #print(f'{x+x_dir[dir]} {y+y_dir[dir]}')
         x = x + x_dir[dir]
         y = y + y_dir[dir]
         move_cnt += 1
         # 골에 빠졌다면
         if x==gx and y==gy:
             return (x, y, move_cnt, 1)
-    #print(f'최종: {x},{y}')
     return (x, y, move_cnt, 0)
 
 Q = deque()
@@ -66,6 +63,7 @@ while len(Q) > 0:
                 nBx = nBx + x_dir[i]*-1
                 nBy = nBy + y_dir[i]*-1
                 Bmove -= 1
+
         # 둘다 안움직였을때 pass
         if  Rmove == 0 and Bmove == 0:
             visited[(nRx,nRy,nBx,nBy)]=1
@@ -73,6 +71,7 @@ while len(Q) > 0:
         # 이미 방문했으면 pass
         if (nRx, nRy,nBx,nBy) in visited:
             continue
+        
         # 방문 표시하고 deque에 추가
         visited[(nRx,nRy,nBx,nBy)]=1
         Q.append((nRx,nRy,nBx,nBy, dist+1))
