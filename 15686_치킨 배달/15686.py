@@ -12,6 +12,7 @@ graph = list()
 for _ in range(n):
     graph.append(list(map(int, input().split())))
 
+# chicken, home 위치를 미리 다 저장
 chicken_list = list()
 home_list = list()
 for i in range(n):
@@ -23,17 +24,18 @@ for i in range(n):
             home_list.append((i,j))
 
 ans = float('inf')
+
+# 폐점 안시킬 위치를 조합으로 알아냄
 for comb in combinations(chicken_list, m):
-    for x,y in comb:
-        graph[x][y]=2
     total_dist = 0
+    # 각 집에서 가장 가까운 치킨거리 찾아냄
     for home in home_list:
         min_dist = float('inf')
         for chicken in comb:
             min_dist = min(min_dist, abs(home[0]-chicken[0])+abs(home[1]-chicken[1]))
         total_dist += min_dist
+    # 가장 가까운 치킨거리 합을 업데이트
     ans = min(ans, total_dist)
-    
 print(ans)
 
 
