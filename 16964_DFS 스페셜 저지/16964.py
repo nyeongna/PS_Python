@@ -43,3 +43,13 @@ if ans_list == input_dfs:
     print(1)
 else:
     print(0)
+
+'''
+1 4 3 6 5 2
+'''
+'''
+      1
+  4     2
+ 3 6 5
+
+'''
