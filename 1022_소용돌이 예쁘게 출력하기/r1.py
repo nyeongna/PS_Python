@@ -35,6 +35,7 @@ while True:
         if cnt == total_cnt:
             break
     # d방향으로 1칸 전진
+    # 마지막 (5000 5000)에서 (5000, 5001)로 전진하지 않는 이유는 그 전에 map 배열이 채워지기 때문에 무조건 break함
     x = x + dir[d][0]
     y = y + dir[d][1]
     step += 1
@@ -47,6 +48,7 @@ while True:
         if d==0 or d==2:
             max_step += 1
 
+#가장 긴 숫자 기준으로 padding해서 출력
 max_num = len(str(max_num))
 for i in range(r2-r1+1):
     for j in range(c2-c1+1):
