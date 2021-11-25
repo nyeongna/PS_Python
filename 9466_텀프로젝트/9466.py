@@ -23,7 +23,7 @@ def DFS(node):
     if visited[next_node]==0:
         visited[next_node]=1
         DFS(next_node)
-    # elif에 도달했다면 cycle이 발견됐다는뜻
+    # finished가 안끝난 next_node에 접근했단것은 cycle이 발견됐다는 뜻
     # count_cyclonize를 통해 cycle에 속하는 정점의 갯수 구함
     elif visited[next_node]==1 and finished[next_node]==0:
         count_cyclonize(node)

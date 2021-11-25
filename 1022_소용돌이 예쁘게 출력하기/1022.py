@@ -1,7 +1,7 @@
 r1, c1, r2, c2 = map(int, input().split())
 r1, c1, r2, c2 = r1+5000, c1+5000, r2+5000, c2+5000
 
-#graph = [ [0]*(10002) for _ in range(10002) ]
+graph = [ [0]*(10002) for _ in range(10002) ]
 
 max_dist=float('-inf')
 
