@@ -16,8 +16,6 @@ for num in num_list:
     else:
         d[num] = [1,a,b]
 
-# for key, val in d.items():
-#     print(key, val)
 rec = [0]*(n)
 def dfs(num, level):
     if level==n:

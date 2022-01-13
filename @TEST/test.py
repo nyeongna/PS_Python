@@ -1,5 +1,9 @@
-a = [1,2,3]
-b = [1,2]
+a = [ [i+j for j in range(5)] for i in range(3) ]
+for i in a:
+    print(i)
 
-if b in a:
-    print(1)
+b=list(zip(*a[::-1]))
+print(b)
+
+c=list(zip(*b[::-1]))
+print(c)
