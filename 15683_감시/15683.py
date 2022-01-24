@@ -37,6 +37,7 @@ def see(dc, cctv, tmp_graph):
             tmp_graph[dx][dy] = '#'
             dx = dx + dir[0]
             dy = dy + dir[1]
+            
 ans = float('inf')
 def dfs(level):
     global ans

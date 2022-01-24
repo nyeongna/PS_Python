@@ -17,7 +17,8 @@ for i in range(1, n+1, 1):
     for wok in wok_list:
         if (i - wok) >= 0:
             min_num = min(min_num, dp[i-wok])
-    dp[i] = min_num+1
+    dp[i] = min_num + 1
+
 if dp[n]>=float('inf'):
     print(-1)
 else:
