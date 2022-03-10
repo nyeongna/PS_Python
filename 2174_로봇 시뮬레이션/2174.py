@@ -32,7 +32,7 @@ for _ in range(m):
         new_rd = (rd-cnt)%4
         robot_dict[idx] = (rx, ry, new_rd)
         graph[rx][ry] = (rx,ry,new_rd,idx)
-    # L, R이면 방향만 바꿔서 다시 robot_dict, graph 업데이트
+    # R, R이면 방향만 바꿔서 다시 robot_dict, graph 업데이트
     elif ops == 'R':
         new_rd = (rd+cnt)%4
         robot_dict[idx] = (rx, ry, new_rd)
@@ -53,7 +53,7 @@ for _ in range(m):
         robot_dict[idx] = (dx,dy,rd)
         graph[dx][dy] = (dx, dy, rd, idx)
         graph[rx][ry] = 0
-        
+
 # 여기까지 왔으면 모든 임무 완수 가능
 print('OK')
         

@@ -19,6 +19,8 @@ while len(Q) > 0:
     visited[n] = 1
     if found and dist>found:
         continue
+    # 처음에 딱 발견했으면, 현재 Q에 들어있는 값들에 대해서만 비교를 해주고
+    # bfs 확장은 멈춰도된다
     if n==m:
         found=dist
         cnt += 1
